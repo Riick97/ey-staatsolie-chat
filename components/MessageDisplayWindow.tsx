@@ -2,6 +2,7 @@ import { RefObject } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getIconAndClassName } from "./utilsFrontEnd";
+import Image from "next/image";
 
 export interface Message {
   type: "apiMessage" | "userMessage";
@@ -100,15 +101,22 @@ export const MessageItem = ({
           ${
             isApi
               ? "bg-gray-100 text-gray-800"
-              : "bg-blue-500 text-white ml-auto"
+              : "bg-yellow-300 text-gray-900 ml-auto"
           }`}
       >
         <MessageContent message={message} />
       </div>
 
       {!isApi && (
-        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 text-gray-600 flex items-center justify-center">
-          {icon}
+        <div className="flex-shrink-0 w-8 h-8 rounded-full overflow-hidden flex items-center justify-center">
+          <Image
+            src="/usericon.png"
+            alt="Me"
+            width={24}
+            height={24}
+            className="rounded-full object-cover w-full h-full"
+            priority
+          />
         </div>
       )}
     </div>
