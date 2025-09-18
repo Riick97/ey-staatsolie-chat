@@ -50,7 +50,7 @@ export default function Home() {
         messages: [
           {
             message:
-              "Hallo! Ik sta tot uw dienst om ondersteuning te bieden bij diverse werkzaamheden gerelateerd aan de fiscale wet- en regelgeving van Curaçao (wetbundel versie 2020). Waarmee kan ik u vandaag van dienst zijn?",
+              "Hello! I am at your service to assist with interpreting and analyzing the Staatsolie Annual Reports. How may I help you today?",
             type: "apiMessage",
           },
           ...(state.histories[chatMode] || [])
