@@ -204,18 +204,18 @@ export default function Home() {
           {/* Content wrapper */}
           <div className="flex h-full w-full gap-6">
             {/* Left sidebar - Configuration */}
-            <div className="w-72 flex-shrink-0  rounded-lg p-4 shadow-sm pt-32 ">
+            {/* <div className="w-72 flex-shrink-0  rounded-lg p-4 shadow-sm pt-32 ">
               <ConfigurationPane
                 selectedValues={selectedValues}
                 setSelectedValues={setSelectedValues}
                 setChatMode={setChatMode}
               />
-            </div>
+            </div> */}
 
             {/* Main chat area - Takes remaining width */}
             <div className="flex-1 flex flex-col h-full bg-white pl-10">
               <div className="flex pt-10">
-                <div className="-mt-3">
+                {/* <div className="-mt-3">
                   <Image
                     src="/logoGob.png"
                     alt="AI"
@@ -224,9 +224,9 @@ export default function Home() {
                     className={`mr-8`}
                     priority
                   />
-                </div>
+                </div> */}
                 <h1 className="text-3xl text-stone-500 pb-2 mb-4">
-                  Fiscale Chat
+                  Staatsolie Chat
                 </h1>
               </div>
               {/* Messages container - Takes available height minus input height */}
