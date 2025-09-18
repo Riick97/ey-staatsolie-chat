@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const serverApi =
   process.env.NEXT_PUBLIC_SERVER_API! ||
-  "https://fiscal-chat-server.onrender.com/stream";
+  "https://staatsolie-chat-server.onrender.com/stream";
 
 const MessageDisplayWindow = dynamic(
   () => import("@/components/MessageDisplayWindow"),
@@ -215,18 +215,18 @@ export default function Home() {
             {/* Main chat area - Takes remaining width */}
             <div className="flex-1 flex flex-col h-full bg-white pl-10">
               <div className="flex pt-10">
-                {/* <div className="-mt-3">
+                <div className="-mt-3">
                   <Image
-                    src="/logoGob.png"
+                    src="/staatsolie-logo.png"
                     alt="AI"
                     width="150"
                     height="100"
-                    className={`mr-8`}
+                    className={`mr-2`}
                     priority
                   />
-                </div> */}
-                <h1 className="text-3xl text-stone-500 pb-2 mb-4">
-                  Staatsolie Chat
+                </div>
+                <h1 className="text-3xl text-stone-500 pb-2 mb-4 -mt-2">
+                  Chat
                 </h1>
               </div>
               {/* Messages container - Takes available height minus input height */}
@@ -260,13 +260,13 @@ export default function Home() {
                       onChange={(e) => setUserInput(e.target.value)}
                       className={`w-full resize-none text-lg p-4 ${backgroundChatColor} 
                       rounded-lg text-gray-800 focus:outline-none focus:ring-1 
-                      focus:ring-blue-500 transition-shadow`}
+                      focus:ring-yellow-400 transition-shadow`}
                     />
                     <button
                       type="submit"
                       disabled={loading}
                       className="absolute right-4 top-1/2 -translate-y-1/2 
-                      text-teal-500 hover:text-teal-600 transition-colors
+                      text-yellow-400 hover:text-yellow-500 transition-colors
                       disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {loading ? (
